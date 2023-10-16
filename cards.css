@@ -1,0 +1,77 @@
+.cards-container-main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 85px;
+}
+
+.cards-container {
+    height: 170px;
+    width: 70vw;
+    background-color: var(--bg-color);
+    position: absolute;
+    top: -75px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 15px 15px 5px 15px;
+    overflow-x: auto;
+    box-shadow: 0 0 10px 2px rgb(24, 23, 23);
+}
+
+.cards {
+    width: fit-content;
+    display: flex;
+    height: 100%;
+    gap: 10px;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.card {
+    height: 100%;
+    width: 100px;
+    background-color: aqua;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+/* For Webkit browsers like Chrome/Safari */
+.cards-container::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+  height: 5px;
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+  background-color: #6777be; /* Color of the scrollbar handle */
+  border-radius: 6px; /* Roundness of the scrollbar handle */
+}
+
+.cards-container::-webkit-scrollbar-track {
+  background-color: transparent; /* Color of the scrollbar track */
+}
+
+.overlay {
+    position: absolute;
+    background-color: rgba(2, 6, 41, 0.692);
+    height: 100%;
+    width: 100%;
+    transform: translateY(100px);
+    box-sizing: border-box;
+    padding: 10px;
+    opacity: 0;
+    transition: transform 0.1s ease-out;
+    color: white;
+}
+
+.card:hover .overlay{
+    opacity: 1;
+    transform: translateY(30px);
+}

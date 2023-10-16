@@ -1,0 +1,144 @@
+.map-feature {
+    height: 100vh;
+    background-color: var(--light-color);
+    display: flex;
+    gap: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.filler-1 {
+    height: 20vh;
+    background-color: var(--light-color);
+    margin: 10px 0 2px 0;
+}
+.map-countries {
+    flex-grow: 1;
+    background-color: var(--bg-color);
+    position: relative;
+    z-index: 2;
+
+}
+
+#myanmar {
+    width: 10%;
+    top: 7.5%;
+    left: 9%;
+}
+
+#thailand {
+    width: 10%;
+    top: 22%;
+    left: 15.8%;
+}
+
+.map-countries #laos {
+    width: 10%;
+    top: 13.5%;
+    left: 19%;
+}
+
+#vietnam {
+    height: 39%;
+    top: 9%;
+    left: 21.9%;
+}
+
+#cambodia {
+    height: 14%;
+    top: 30.8%;
+    left: 20.5%;
+}
+
+#malaysia {
+    height: 14%;
+    top: 54.8%;
+    left: 19.5%;
+}
+
+#philippines {
+    width: 14%;
+    top: 22.8%;
+    left: 38.5%;
+}
+.country {
+    position: absolute;
+}
+
+.flags-container {
+    flex-grow: 0.1;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    box-sizing: border-box;
+    padding: 5px;
+    position: relative;
+    z-index: 4;
+}
+
+.flag {
+    flex-grow: 1;
+    background-color: rgb(16, 38, 58);
+    background-size:60%;
+    background-position:right;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10%;
+    box-sizing: border-box;
+    color: white;
+    opacity: 0;
+    transition: transform 0.1s ease-out;
+    z-index: 4;
+}
+
+.flag:hover {
+    position: relative;
+    transform: scale(1.07);
+}
+
+.flag-active {
+    background-color: var(--accent-color);
+}
+
+.show {
+    animation: slideIn 0.4s ease-out;
+    opacity: 1;
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(200px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.popup {
+    position: absolute;
+    height: 98%;
+    background-color: rgba(16, 71, 119, 0.411);
+    width: 200%;
+    z-index: 1;
+    left: -200%;
+    display: none;
+}
+
+.popup-show {
+    display: inline;
+    animation: popupIn 0.2s ease-out;
+}
+
+@keyframes popupIn {
+    from {
+        transform: translateX(10%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
